@@ -42,9 +42,8 @@ class PaymentDetailesView extends StatelessWidget {
                     onpress: () {
                       if (fornkey.currentState!.validate()) {
                         fornkey.currentState!.save();
-                      }
-                      else {
-                        Get.to(()=>ThankYou());
+                      } else {
+                        Get.to(() => ThankYou());
                         autovalidateMode = AutovalidateMode.always;
                       }
                     },
@@ -62,7 +61,7 @@ class CustomeCredit extends StatefulWidget {
       {super.key, required this.autovalidateMode, required this.formKey});
 
   final AutovalidateMode autovalidateMode;
-  final GlobalKey <FormState> formKey;
+  final GlobalKey<FormState> formKey;
 
   @override
   State<CustomeCredit> createState() => _CustomeCreditState();
@@ -70,10 +69,7 @@ class CustomeCredit extends StatefulWidget {
 
 class _CustomeCreditState extends State<CustomeCredit> {
   @override
-  String cardNumber = '',
-      expiryDate = '',
-      cardHolderName = '',
-      cvvCode = '';
+  String cardNumber = '', expiryDate = '', cardHolderName = '', cvvCode = '';
   bool showBackView = false;
 
   Widget build(BuildContext context) {

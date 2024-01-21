@@ -56,7 +56,9 @@ class myCardView extends StatelessWidget {
                 )
               ],
             ),
-            Button(onpress: () => Get.to(()=>PaymentDetailesView()),title:'Complete Payment')
+            Button(
+                onpress: () => Get.to(() => PaymentDetailesView()),
+                title: 'Complete Payment')
           ],
         ),
       ),
@@ -65,15 +67,17 @@ class myCardView extends StatelessWidget {
 }
 
 class Button extends StatelessWidget {
-   Button({
-    super.key, this.onpress, required this.title,
+  Button({
+    super.key,
+    this.onpress,
+    required this.title,
   });
-   final void  Function()? onpress;
-   final String title;
+  final void Function()? onpress;
+  final String title;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-   onTap: onpress,
+      onTap: onpress,
       child: Container(
         margin: EdgeInsets.only(top: 10, bottom: 21),
         width: 350,

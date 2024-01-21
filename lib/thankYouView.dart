@@ -56,7 +56,8 @@ class ThankYou extends StatelessWidget {
                   child: CircleAvatar(
                     radius: 40,
                     child: Icon(
-                      Icons.check,color: Colors.white,
+                      Icons.check,
+                      color: Colors.white,
                       size: 40,
                     ),
                     backgroundColor: Color(0xff34A853),
@@ -64,7 +65,8 @@ class ThankYou extends StatelessWidget {
                   backgroundColor: Color(0xFFEDEDED),
                 )),
             ThankContent(),
-            Positioned(top: -34,child: SvgPicture.asset('assetes/Arrow 1.svg')),
+            Positioned(
+                top: -34, child: SvgPicture.asset('assetes/Arrow 1.svg')),
           ],
         ),
       ),
@@ -114,40 +116,46 @@ class ThankContent extends StatelessWidget {
                     )),
           ),
           Container(
-            margin: EdgeInsets.only(top: 30,left: 16,right: 16),
+            margin: EdgeInsets.only(top: 30, left: 16, right: 16),
             width: 305,
             height: 73,
             child: Row(
               children: [
-                SizedBox(width: 23,),
-                SvgPicture.asset('assetes/logo.svg',),SizedBox(width: 23,),
-                    Text.rich(
+                SizedBox(
+                  width: 23,
+                ),
+                SvgPicture.asset(
+                  'assetes/logo.svg',
+                ),
+                SizedBox(
+                  width: 23,
+                ),
+                Text.rich(
+                  TextSpan(
+                    children: [
                       TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'Credit Card ',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                          TextSpan(
-                            text: 'Mastercard **78 ',
-                            style: TextStyle(
-                              color: Colors.black.withOpacity(0.699999988079071),
-                              fontSize: 16,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ],
+                        text: 'Credit Card ',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
                       ),
-                    )
-
+                      TextSpan(
+                        text: 'Mastercard **78 ',
+                        style: TextStyle(
+                          color: Colors.black.withOpacity(0.699999988079071),
+                          fontSize: 16,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
             decoration: ShapeDecoration(
@@ -156,19 +164,24 @@ class ThankContent extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
               ),
             ),
-          ),Padding(
+          ),
+          Padding(
             padding: const EdgeInsets.only(top: 100.0),
-            child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Icon(FontAwesomeIcons.barcode,size: 50,),
+                Icon(
+                  FontAwesomeIcons.barcode,
+                  size: 50,
+                ),
                 Container(
                   width: 113,
-                  height: 58,child: Center(
-                    child: Text(
-                    'PAID',
-                    textAlign: TextAlign.center,
-                    style:Styles.style25.copyWith(color: Color(0xFF34A853))
-                ),
+                  height: 58,
+                  child: Center(
+                    child: Text('PAID',
+                        textAlign: TextAlign.center,
+                        style:
+                            Styles.style25.copyWith(color: Color(0xFF34A853))),
                   ),
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(

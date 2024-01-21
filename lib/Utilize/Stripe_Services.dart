@@ -1,0 +1,4 @@
+class Stripe_Services
+{
+
+}

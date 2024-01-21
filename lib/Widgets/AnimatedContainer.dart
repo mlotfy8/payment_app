@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 
-
 class AnimateContainer extends StatefulWidget {
-  const AnimateContainer({super.key, });
+  const AnimateContainer({
+    super.key,
+  });
 
   @override
   State<AnimateContainer> createState() => _AnimateContainerState();
@@ -12,7 +13,7 @@ class AnimateContainer extends StatefulWidget {
 
 class _AnimateContainerState extends State<AnimateContainer> {
   @override
-  int activeindex=0;
+  int activeindex = 0;
   Widget build(BuildContext context) {
     return SizedBox(
       height: 70,
@@ -23,11 +24,12 @@ class _AnimateContainerState extends State<AnimateContainer> {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.all(5.0),
-          child: InkWell(onTap: (){
-            setState(() {
-              activeindex=index;
-            });
-          },
+          child: InkWell(
+            onTap: () {
+              setState(() {
+                activeindex = index;
+              });
+            },
             child: AnimatedContainer(
               duration: Duration(seconds: 1),
               child: Container(
@@ -45,12 +47,15 @@ class _AnimateContainerState extends State<AnimateContainer> {
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                       width: 1.50,
-                      color: activeindex == index ? Color(0xFF34A853) : Colors.grey),
+                      color: activeindex == index
+                          ? Color(0xFF34A853)
+                          : Colors.grey),
                   borderRadius: BorderRadius.circular(15),
                 ),
                 shadows: [
                   BoxShadow(
-                    color: activeindex == index  ? Color(0xFF34A853) : Colors.white,
+                    color:
+                        activeindex == index ? Color(0xFF34A853) : Colors.white,
                     blurRadius: 4,
                     offset: Offset(0, 0),
                     spreadRadius: 0,

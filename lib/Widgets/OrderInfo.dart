@@ -10,20 +10,20 @@ class OrderInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: title.length,
+        itemCount: title.length,
         itemBuilder: (context, index) => Row(
-          children: [
-            Text(
-              '${title[index]}',
-              style: Styles.style18,
-            ),
-            Spacer(),
-            Text(
-              '\$${value[index]}',
-              style: Styles.style18,
-            )
-          ],
-        ));
+              children: [
+                Text(
+                  '${title[index]}',
+                  style: Styles.style18,
+                ),
+                Spacer(),
+                Text(
+                  '\$${value[index]}',
+                  style: Styles.style18,
+                )
+              ],
+            ));
   }
 }
 
